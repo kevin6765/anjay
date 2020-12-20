@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="AXIOO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-16 05.52.29 AM"/>
+        <attribute name="created" value="QVhJT087REVTS1RPUC1NT1RWSDhGOzIwMjAtMTEtMTY7MDUuMTguNTggQU07MjczNg=="/>
+        <attribute name="edited" value="QVhJT087REVTS1RPUC1NT1RWSDhGOzIwMjAtMTEtMTY7MDUuNTIuMjkgQU07MjsyODQx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="rataRata" type="Real" array="False" size=""/>
+            <declare name="namaKalian, nimKalian" type="String" array="False" size=""/>
+            <declare name="nilaiUTS, nilaiUAS" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukan nama kalian = &quot;" newline="True"/>
+            <input variable="namaKalian"/>
+            <output expression="&quot;Masukan NIM Kalian&quot;" newline="True"/>
+            <input variable="nimKalian"/>
+            <output expression="&quot;Masukan nilai UTS kalian = &quot;" newline="True"/>
+            <input variable="nilaiUTS"/>
+            <output expression="&quot;Masukan nilai UAS kalian = &quot;" newline="True"/>
+            <input variable="nilaiUAS"/>
+            <assign variable="rataRata" expression="(nilaiUAS+nilaiUTS)/2"/>
+            <if expression="nilaiUTS &gt; 100">
+                <then>
+                    <output expression="&quot;Nilai UTS yang anda masukan salah, silahkan coba lagi!&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="nilaiUTS &lt; 0">
+                        <then>
+                            <output expression="&quot;Nilai UTS yang anda masukan salah, silahkan coba lagi!&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="nilaiUAS &gt; 100">
+                                <then>
+                                    <output expression="&quot;Nilai UAS yang anda masukan salah, silahkan coba lagi!&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="nilaiUAS &lt; 0">
+                                        <then>
+                                            <output expression="&quot;Nilai UAS yang anda masukan salah, silahkan coba lagi!&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="rataRata &gt; 100">
+                                                <then>
+                                                    <output expression="&quot;Nilai Rata-rata anda error karena nilai UTS atau UAS yang anda input tidak benar&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="rataRata &lt; 0">
+                                                        <then>
+                                                            <output expression="&quot;Nilai Rata-rata anda error karena nilai UTS atau UAS yang anda input tidak benar&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="rataRata &gt;= 80">
+                                                                <then>
+                                                                    <output expression="&quot;Anda mendapatkan nilai A&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="rataRata &gt;= 70">
+                                                                        <then>
+                                                                            <output expression="&quot;Anda mendapatkan nilai B&quot;" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="rataRata &gt;= 60">
+                                                                                <then>
+                                                                                    <output expression="&quot;Anda mendapatkan nilai C&quot;" newline="True"/>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="rataRata &gt;= 40">
+                                                                                        <then>
+                                                                                            <output expression="&quot;Anda mendapatkan nilai D&quot;" newline="True"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <if expression="rataRata &gt;= 0">
+                                                                                                <then>
+                                                                                                    <output expression="&quot;Anda mendapatkan nilai E&quot;" newline="True"/>
+                                                                                                </then>
+                                                                                                <else/>
+                                                                                            </if>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                            <output expression="&quot;Nama anda adalah = &quot;&amp; namaKalian" newline="True"/>
+                                                            <output expression="&quot;NIM anda adalah = &quot;&amp; nimKalian" newline="True"/>
+                                                            <output expression="&quot;Nilai Rata-rata kamu adalah = &quot;&amp; rataRata" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

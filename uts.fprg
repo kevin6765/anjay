@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="AXIOO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-11-25 05.37.55 PM"/>
+        <attribute name="created" value="QVhJT087REVTS1RPUC1NT1RWSDhGOzIwMjAtMTEtMjU7MDMuMzYuMDMgUE07MjczOQ=="/>
+        <attribute name="edited" value="QVhJT087REVTS1RPUC1NT1RWSDhGOzIwMjAtMTEtMjU7MDUuMzcuNTUgUE07MjsyODU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="uang, barang, barangBelian, barangBelian1, barangBelian2, totalHarga, totalHarga2" type="Integer" array="False" size=""/>
+            <declare name="z" type="Boolean" array="False" size=""/>
+            <while expression="z = 0">
+                <output expression="&quot;Selamat datang di warung buah kami, silahkan pilih barang yang ingin dibeli&quot;" newline="True"/>
+                <output expression="&quot;Masukan uang yang anda miliki = &quot;" newline="True"/>
+                <input variable="uang"/>
+                <output expression="&quot;Pilih barang, 1. Semangka 2. Melon 3. Jambu 4. Pepaya 5. Mangga &quot;" newline="True"/>
+                <input variable="barang"/>
+                <if expression="barang == 1">
+                    <then>
+                        <output expression="&quot;Harga semangka RP. 50000, Mau beli berapa? = &quot;" newline="True"/>
+                        <input variable="barangBelian"/>
+                        <assign variable="barangBelian2" expression="barangBelian * 50000"/>
+                    </then>
+                    <else>
+                        <if expression="barang == 2">
+                            <then>
+                                <output expression="&quot;Harga melon RP. 30000, Mau beli berapa? = &quot;" newline="True"/>
+                                <input variable="barangBelian"/>
+                                <assign variable="barangBelian2" expression="barangBelian * 30000"/>
+                            </then>
+                            <else>
+                                <if expression="barang == 3">
+                                    <then>
+                                        <output expression="&quot;Harga jambu RP. 20000, Mau beli berapa? = &quot;" newline="True"/>
+                                        <input variable="barangBelian"/>
+                                        <assign variable="barangBelian2" expression="barangBelian * 20000"/>
+                                    </then>
+                                    <else>
+                                        <if expression="barang == 4">
+                                            <then>
+                                                <output expression="&quot;Harga pepaya RP. 10000, Mau beli berapa? = &quot;" newline="True"/>
+                                                <input variable="barangBelian"/>
+                                                <assign variable="barangBelian2" expression="barangBelian * 10000"/>
+                                            </then>
+                                            <else>
+                                                <if expression="barang == 5">
+                                                    <then>
+                                                        <output expression="&quot;Harga Mangga RP. 60000, Mau beli berapa? = &quot;" newline="True"/>
+                                                        <input variable="barangBelian"/>
+                                                        <assign variable="barangBelian2" expression="barangBelian * 60000"/>
+                                                    </then>
+                                                    <else/>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <if expression="barangBelian2 &lt;= 200000">
+                    <then>
+                        <assign variable="barangBelian1" expression="barangBelian2"/>
+                        <assign variable="totalHarga" expression="uang - barangBelian2"/>
+                        <output expression="&quot;Total harga kamu adalah&quot;&amp; barangBelian1" newline="True"/>
+                        <output expression="&quot;Uangmu yaitu&quot;&amp; uang&amp; &quot;dikurangi harga yaitu&quot;&amp; barangBelian1&amp; &quot;menjadi&quot;&amp; totalHarga" newline="True"/>
+                    </then>
+                    <else>
+                        <assign variable="barangBelian2" expression="barangBelian2 * 5/100"/>
+                        <assign variable="totalHarga" expression="barangBelian2 - barangBelian1"/>
+                        <assign variable="totalHarga2" expression="uang - totalHarga"/>
+                        <output expression="&quot;Kamu mendapatkan diskon&quot;&amp; barangBelian1&amp; &quot;karena belanja di atas 200 Ribu&quot;" newline="True"/>
+                        <output expression="&quot;Total harga kamu adalah&quot;&amp; totalHarga" newline="True"/>
+                        <output expression="&quot;Uangmu yaitu&quot;&amp; uang&amp; &quot;dikurangi harga yaitu&quot;&amp; totalHarga&amp; &quot;menjadi&quot;&amp; totalHarga2" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="z" expression="Break"/>
+            </while>
+            <output expression="&quot;selsai&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
